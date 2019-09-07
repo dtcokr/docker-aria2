@@ -12,8 +12,10 @@ $ docker run -d \
     -p 6800:6800 \
     -v /path/to/your/aria2.conf:/aria2/aria2.conf \
     -v /path/to/save/file:/downloads \
+    -v /path/to/certificate-files:/aria2/ssl \
     dtcokr/aria2
 ```
+*optional: if you want to enable rpc-secure, mount the certificate files to the container using `-v /path/to/certificate-files:/aria2/ssl` and edit the `aria2.conf` before running container.
 
 ### Tag `standalone`
 Go to http://ip:8989 to control Aria2 using graphics interface. Go to http://ip:8181 to browser file index. Using [darkhttpd](https://unix4lyfe.org/darkhttpd/) as web server.
@@ -25,5 +27,7 @@ $ docker run -d \
     -p 8181:81 \
     -v /path/to/your/aria2.conf:/aria2/aria2.conf \
     -v /path/to/save/file:/downloads \
+    -v /path/to/certificate-files:/aria2/ssl \
     dtcokr/aria2:standalone
 ```
+*optional: if you want to enable rpc-secure, mount the certificate files to the container using `-v /path/to/certificate-files:/aria2/ssl` and edit the `aria2.conf` before running container.
