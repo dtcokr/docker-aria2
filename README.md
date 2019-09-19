@@ -1,4 +1,6 @@
 # docker-aria2
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/dtcokr/docker-aria2/standalone)
+
 Use aria2 in docker. 
 
 [Aria2 Source(GitHub)](https://aria2.github.io/), conf file by [DOUBI(GitHub)](https://raw.githubusercontent.com/ToyoDAdoubi/doubi/master/other/Aria2/aria2.conf) which you **REALLY** should download to custom the settings that suits you. Tracker list by [ngosang(GitHub)](https://github.com/ngosang/trackerslist) added to conf file by default to improve BT downloading.
