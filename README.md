@@ -1,5 +1,6 @@
 # docker-aria2
 ![Docker Pulls](https://img.shields.io/docker/pulls/dtcokr/aria2)
+[![](https://images.microbadger.com/badges/image/dtcokr/aria2.svg)](https://microbadger.com/images/dtcokr/aria2 "Get your own image badge on microbadger.com")
 ![GitHub last commit](https://img.shields.io/github/last-commit/dtcokr/docker-aria2)
 
 Use aria2 in docker. 
