@@ -1,5 +1,6 @@
 FROM alpine:latest
-LABEL maintainer "Dtcokr <dtcokr@outlook.com>"
+LABEL maintainer="Dtcokr <dtcokr@outlook.com>" \
+  org.label-schema.vcs-url="https://github.com/dtcokr/docker-aria2"
 
 COPY aria2.conf /aria2/aria2.conf
 COPY dht.dat /aria2/dht.dat
