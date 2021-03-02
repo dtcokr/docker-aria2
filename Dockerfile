@@ -19,4 +19,4 @@ EXPOSE 6800 80 81
 VOLUME /aria2 /downloads
 WORKDIR /downloads
 
-ENTRYPOINT ["/aria2/start.sh"]
+COMMAND ["/aria2/start.sh"]
