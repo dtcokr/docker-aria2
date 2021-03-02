@@ -14,6 +14,7 @@ RUN apk add --update --no-cache aria2 darkhttpd unzip \
   && unzip AriaNg-1.2.1.zip -d /aria2/webui \
   && chmod +x /aria2/start.sh
 
+ENV PUID=1000 PGID=1000
 EXPOSE 6800 80 81
 VOLUME /aria2 /downloads
 WORKDIR /downloads
