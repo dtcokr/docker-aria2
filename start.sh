@@ -1,5 +1,5 @@
 #!/bin/sh
-chown ${PUID}:${PGID} /aria2
+chown -R ${PUID}:${PGID} /aria2
 exec su-exec "${PUID}:${PGID}" \
   "/usr/bin/darkhttpd /aria2/webui --port 80 &" \
 exec su-exec "${PUID}:${PGID}" \
