@@ -20,6 +20,14 @@ $ docker run -d \
 ### Tag `standalone`
 Go to http://ip:8989 to control Aria2 using graphics interface. Go to http://ip:8181 to browser file index. Using [darkhttpd](https://unix4lyfe.org/darkhttpd/) as web server.
 
+Change UID and GID if needed.
+```sh
+...
+    -e PUID=1000
+    -e PGID=1000
+...
+```
+
 ```sh
 $ docker run -d \
     -p 6800:6800 \
@@ -27,6 +35,8 @@ $ docker run -d \
     -p 8181:81 \
     -v /path/to/your/aria2.conf:/aria2/aria2.conf \
     -v /path/to/save/file:/downloads \
+    -e PUID=1000
+    -e PGID=1000
     dtcokr/aria2:standalone
 ```
 
