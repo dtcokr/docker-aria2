@@ -12,6 +12,7 @@ RUN apk add --update --no-cache aria2 unzip su-exec \
   && touch /aria2/aria2.session \
   && chmod +x /aria2/start.sh
 
+ENV PUID=1000 PGID=1000
 EXPOSE 6800
 VOLUME /aria2 /downloads
 WORKDIR /downloads
