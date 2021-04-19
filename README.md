@@ -35,3 +35,20 @@ $ docker run -d \
     dtcokr/aria2:standalone
 ```
 *optional: if you want to enable rpc-secure, mount the certificate files to the container using `-v /path/to/certificate-files:/aria2/ssl` and edit the `aria2.conf` before running container.
+
+### Permission Control
+
+to use other user/group than `root`, you can set docker environment:
+
+let's say you want to use `user 1000` and `group 1000` to download files
+
+```sh
+$ docker run -d \
+    -p 6800:6800 \
+    -v /path/to/your/aria2.conf:/aria2/aria2.conf \
+    -v /path/to/save/file:/downloads \
+    -v /path/to/certificate-files:/aria2/ssl \
+    -e PUID=1000
+    -e PGID=1000
+    dtcokr/aria2
+```
