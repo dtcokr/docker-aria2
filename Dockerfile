@@ -3,6 +3,7 @@ LABEL maintainer "Dtcokr <dtcokr@outlook.com>"
 
 COPY aria2.conf /aria2/aria2.conf
 COPY dht.dat /aria2/dht.dat
+COPY dht6.dat /aria2/dht6.dat
 COPY start.sh /aria2/start.sh
 
 RUN apk add --update --no-cache aria2 darkhttpd unzip su-exec \
